@@ -33,7 +33,7 @@ public class ObjectAndClass {
         //anonymous object
         new Calculation();
 
-        //Calling method through an anonymous object
+        //Calling method through an anonymous object.
         new Calculation().fact(5);
     }
 }
