@@ -1,4 +1,4 @@
-package Eolymp;
+package Eolymp.JavaOOP1;
 
 import java.util.Scanner;
 
