@@ -63,7 +63,7 @@ class B extends A{
 
     {System.out.println("instance initializer block is invoked");}
 }
-// Satic Initialization Block:
+// Static Initialization Block:
 //  Static blocks are associated with the class itself rather than with instances of the class.
 //  They are executed only once when the class is loaded into memory, typically during class loading.
 //  Static blocks are used to perform one-time setup tasks for the entire class, such as initializing static variables or setting up resources shared by all instances of the class.
