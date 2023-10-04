@@ -49,6 +49,7 @@ public class Interface {
         d4.draw();
         System.out.println(Drawable4.cube(3));
 
+
     }
 }
 interface printable1{
