@@ -94,7 +94,8 @@ interface Printable2{
 interface Showable2 extends Printable2{
     void show();
 }
-class TestInterface2 implements Showable2{
+
+class TestInterface2 implements Showable2 {
     public void print(){System.out.println("Hello 2");}
     public void show(){System.out.println("Welcome 2");}
 }
@@ -111,8 +112,12 @@ class Rectangle3 implements Drawable3{
 // *** Java 8 Static Method in Interface
 interface Drawable4{
     void draw();
-    static int cube(int x){return x*x*x;}
+    static int cube(int x){
+        return x*x*x;
+    }
 }
 class Rectangle4 implements Drawable4{
-    public void draw(){System.out.println("drawing rectangle");}
+    public void draw(){
+        System.out.println("drawing rectangle");
+    }
 }
