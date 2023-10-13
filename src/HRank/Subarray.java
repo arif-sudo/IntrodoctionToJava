@@ -22,10 +22,10 @@ public class Subarray {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n ; j++) {
                 int[] newArr = new int[j+1];
-                for (int k = 0 + i; k <= j; k++) {
+                for (int k = i; k <= j; k++) {
                     newArr[k] = arr[k];
                 }
-                if (sum(newArr) < 0){
+                if (sum(newArr) > 0){
                     count++;
                 }
             }

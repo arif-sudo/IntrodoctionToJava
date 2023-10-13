@@ -1,30 +1,36 @@
 package ICPC;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Profit {
     public static void main(String[] args) {
-        System.out.println("salam");
-        int[] arr = new int[] {1, 2, 3, 4, 5 };
-        System.out.println(Arrays.toString(twoSum(arr, 5)));
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int max = 0;
+        int sum = 0;
 
-    }
-    public static int[] twoSum(int[] arr, int target){
-        HashMap<Integer, Integer> map = new HashMap<>();
-//        curr + x = target
-        for (int i = 0; i < arr.length; i++) {
-            int curr = arr[i];
-            int x = target - curr;
-
-            if (map.containsKey(x)){
-                return new int[] {i, map.get(x)};
-            }
-            map.put(curr,i);
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            int m = scan.nextInt();
+            arr.add(i,m);
         }
-//        return new int[] {-1,-1};
-        return null;
 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                ArrayList<Integer> na = new ArrayList<>();
+                for (int k = i; k <= j ; k++) {
+                    na.add(arr.get(k));
+                    sum = 0;
+                    for (int l = 0; l < na.size(); l++) {
+                        sum += na.get(l);
+                    }
+                    if (sum > max){
+                        max = sum;
+                    }
+                }
+            }
+        }
+        System.out.println(max);
     }
 }
