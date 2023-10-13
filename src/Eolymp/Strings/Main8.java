@@ -21,19 +21,15 @@ public class Main8 {
                 return 0;
             }
             for (String part : parts) {
-                if (part.length() == 0) {
-                    // in case of starting with "."
-                    return 0;
-                }
-                try {
-                    int num = Integer.parseInt(part);
-                    if (!inRange(num)) {
+                    try {
+                        int num = Integer.parseInt(part);
+                        if (!inRange(num)) {
+                            return 0;
+                        }
+                    }
+                    catch (NumberFormatException e) {
                         return 0;
                     }
-                }
-                catch (NumberFormatException e) {
-                    return 0;
-                }
             }
             return 1;
     }
