@@ -61,7 +61,7 @@ class Programmer extends Employee{
 //  In java programming, multiple and hybrid inheritance is supported through interface only. We will learn about interfaces later.
 
 // 1) single inheritance
-class Animal{
+class   Animal{
     void eat(){System.out.println("eating...");}
 }
 class Dog extends Animal{
